@@ -1,0 +1,26 @@
+Etape 1
+Installer l'environnement
+
+virtualenv venv
+
+Etape 2
+installer les dependances
+
+pip install django djangorestframework
+pip freeze > requirements.txt
+
+Etape 3
+Créer un projet django
+
+django-admin startproject projet_postgres .
+
+Etape 4
+effectuer le set-up des variable
+ficghier .env = general
+fichier local.env, staging.env, production.env
+mettre chaque variable dans chaque fichier
+
+changer les fichier wsgi et manage.py pour charger le bon fichier
+
+Etape 5
+Migration pour la bdd local

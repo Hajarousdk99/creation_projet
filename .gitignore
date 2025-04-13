@@ -1,0 +1,71 @@
+# Environnement virtuel
+venv/
+env/
+ENV/
+.venv/
+local.env
+production.env
+staging.env   
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Fichiers SQLite (dev seulement)
+*.sqlite3
+
+# Fichiers logs
+*.log
+
+# Secrets / fichiers d'environnement
+.env
+.env.*
+
+# Migrations (optionnel si auto-générées, mais souvent versionnées)
+# ** à commenter si tu veux les versionner **
+# */migrations/
+# */migrations/*.py
+# */migrations/*.pyc
+
+# Fichiers media (upload utilisateur)
+media/
+
+# Fichiers statiques collectés
+staticfiles/
+static/
+
+# JetBrains IDE
+.idea/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Test coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Django specific
+local_settings.py
+db.sqlite3-journal
+
+# Pytest
+.pytest_cache/
+
+# mypy / pylint / flake8
+.mypy_cache/
+.pylint.d/
+.pyre/
+
+# Docker
+*.pid
+
+# __init__ backups
+*__init__.py~
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
