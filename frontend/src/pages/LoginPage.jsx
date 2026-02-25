@@ -23,7 +23,11 @@ export default function LoginPage() {
       setTokens({ access: data.access, refresh: data.refresh })
       navigate('/')
     } catch (err) {
-      setError(err.message || 'Erreur')
+      const msg = err?.data?.detail
+        || (typeof err?.data === 'object' && Object.values(err?.data || {}).flat().filter(Boolean)[0])
+        || err.message
+        || 'Erreur'
+      setError(msg)
     } finally {
       setLoading(false)
     }
