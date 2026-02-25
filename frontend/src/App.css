@@ -1,0 +1,513 @@
+/* ========== Layout ========== */
+.appShell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--beige-blanc) 0%, var(--beige-creme) 100%);
+  color: var(--texte);
+}
+
+.topNav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--beige-sable);
+  background: rgba(250, 246, 242, 0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--ombre);
+}
+
+.brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--texte);
+}
+.brand:hover {
+  color: var(--rose-fonce);
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navLinks a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--texte-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.navLinks a:hover {
+  color: var(--rose-fonce);
+}
+
+.linkButton {
+  background: transparent;
+  border: 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--texte-muted);
+  cursor: pointer;
+  padding: 0;
+}
+.linkButton:hover {
+  color: var(--rose-fonce);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+/* ========== Stack & Grid ========== */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stack.small {
+  max-width: 420px;
+}
+
+.stack.tight {
+  gap: 0.5rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.row.spread {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ========== Cards ========== */
+.card {
+  background: var(--blanc);
+  border: 1px solid var(--beige-sable);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 12px var(--ombre);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 4px 20px var(--ombre-forte);
+  border-color: var(--rose-clair);
+}
+
+.card.error {
+  border-color: var(--erreur);
+  background: #fdf2f2;
+}
+
+/* Product cards */
+.productCard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.productCardImageWrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--beige-sable);
+  overflow: hidden;
+}
+.productCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.productCardImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texte-muted);
+  font-size: 0.9rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+.productCard .productTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--texte);
+  margin-bottom: 0.25rem;
+  padding: 0 1.25rem;
+  padding-top: 1rem;
+}
+.productCard .muted {
+  font-size: 0.9rem;
+  color: var(--texte-muted);
+  flex: 1;
+  min-height: 2.5em;
+  padding: 0 1.25rem;
+}
+.productCard .price {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--rose-fonce);
+  padding: 0 1.25rem;
+}
+.productCard .row {
+  margin-top: auto;
+  padding: 0 1.25rem 1.25rem;
+}
+.productCardTitleLink {
+  text-decoration: none;
+  color: inherit;
+}
+.productCardTitleLink:hover {
+  color: var(--rose-fonce);
+}
+.productCardImageWrap[href] {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== Page header ========== */
+.pageHeader {
+  margin-bottom: 1.5rem;
+}
+.pageHeader h1 {
+  margin-bottom: 0.35rem;
+}
+.pageHeader .muted {
+  font-size: 1rem;
+}
+
+/* ========== Typography ========== */
+.muted {
+  color: var(--texte-muted);
+  font-size: 0.95rem;
+}
+
+.price {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--rose-fonce);
+}
+
+.errorText {
+  color: var(--erreur);
+  font-size: 0.9rem;
+}
+
+/* ========== Forms ========== */
+.form label {
+  display: grid;
+  gap: 0.4rem;
+  text-align: left;
+  font-weight: 500;
+  color: var(--texte);
+}
+
+input {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--beige-sable);
+  background: var(--blanc);
+  color: var(--texte);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus {
+  outline: none;
+  border-color: var(--rose-accent);
+  box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.2);
+}
+input::placeholder {
+  color: var(--texte-muted);
+  opacity: 0.8;
+}
+
+/* ========== Buttons ========== */
+button,
+a.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--rose-douce);
+  background: var(--rose-pale);
+  color: var(--texte);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+button:hover,
+a.secondary:hover {
+  background: var(--rose-clair);
+  border-color: var(--rose-accent);
+}
+button:active,
+a.secondary:active {
+  transform: scale(0.98);
+}
+
+button.primary,
+.checkoutBtn {
+  background: linear-gradient(135deg, var(--rose-accent), var(--rose-fonce));
+  border-color: var(--rose-fonce);
+  color: var(--blanc);
+}
+button.primary:hover,
+.checkoutBtn:hover {
+  background: linear-gradient(135deg, var(--rose-fonce), var(--rose-accent));
+  border-color: var(--rose-fonce);
+  color: var(--blanc);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+button.danger {
+  border-color: var(--danger);
+  background: #fdf2f2;
+  color: var(--danger);
+}
+button.danger:hover {
+  background: #fce8e8;
+}
+
+.qty {
+  width: 72px;
+  text-align: center;
+}
+
+/* ========== Success / Cancel pages ========== */
+.heroMessage {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.heroMessage h1 {
+  margin-bottom: 0.75rem;
+}
+.heroMessage .card {
+  max-width: 400px;
+  margin: 1rem auto;
+  text-align: left;
+}
+.heroMessage a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  background: var(--rose-pale);
+  border: 1px solid var(--rose-douce);
+  color: var(--texte);
+  font-weight: 500;
+}
+.heroMessage a:hover {
+  background: var(--rose-clair);
+  color: var(--rose-fonce);
+}
+
+/* ========== Cart summary ========== */
+.cartSummary {
+  background: linear-gradient(135deg, var(--rose-pale), var(--beige-creme));
+  border-color: var(--rose-douce);
+}
+
+/* ========== Home: choice Femme / Homme ========== */
+.categoryChoiceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.categoryChoiceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.categoryChoiceCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--ombre-forte);
+  color: var(--rose-fonce);
+}
+.categoryChoiceTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.categoryChoiceSub {
+  font-size: 0.9rem;
+  color: var(--texte-muted);
+  margin-top: 0.5rem;
+}
+.categoryChoiceCard:hover .categoryChoiceSub {
+  color: var(--rose-fonce);
+}
+
+/* ========== Category page (Femme / Homme + sous-catégories) ========== */
+.categoryPageTitle {
+  margin-bottom: 0.5rem;
+}
+.subcategorySection {
+  margin-bottom: 1.5rem;
+}
+.subcategorySectionTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--texte-muted);
+}
+.subcategoryGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.subcategoryCard {
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.subcategoryCard:hover {
+  background: var(--rose-pale);
+  border-color: var(--rose-douce);
+  color: var(--rose-fonce);
+}
+.subcategoryCardActive {
+  background: var(--rose-pale);
+  border-color: var(--rose-accent);
+  color: var(--rose-fonce);
+}
+.subcategoryName {
+  display: block;
+}
+.productsSectionTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--texte-muted);
+}
+
+/* ========== Product detail page ========== */
+.backLink {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--texte-muted);
+}
+.backLink:hover {
+  color: var(--rose-fonce);
+}
+.productDetailPage {
+  max-width: 900px;
+}
+.productDetailCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  background: var(--blanc);
+  border: 1px solid var(--beige-sable);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px var(--ombre);
+}
+.productDetailImageWrap {
+  aspect-ratio: 3/4;
+  background: var(--beige-sable);
+  overflow: hidden;
+}
+.productDetailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.productDetailImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texte-muted);
+  font-family: 'Cormorant Garamond', serif;
+}
+.productDetailContent {
+  padding: 1.5rem 1rem 1.5rem 0;
+}
+.productDetailTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.productDetailDescription {
+  color: var(--texte-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.productDetailPrice {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--rose-fonce);
+  margin-bottom: 1.25rem;
+}
+.productDetailActions button,
+.productDetailActions a {
+  min-width: 200px;
+}
+@media (max-width: 640px) {
+  .productDetailCard {
+    grid-template-columns: 1fr;
+  }
+  .productDetailContent {
+    padding: 1rem 1.25rem 1.5rem;
+  }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 640px) {
+  .topNav {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .navLinks {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .row.spread {
+    flex-wrap: wrap;
+  }
+}

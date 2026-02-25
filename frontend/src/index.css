@@ -1,0 +1,76 @@
+:root {
+  /* Palette rose pâle & beige */
+  --rose-pale: #f8e8e8;
+  --rose-clair: #f0d8d8;
+  --rose-douce: #e8c8c8;
+  --rose-accent: #d4a5a5;
+  --rose-fonce: #c49090;
+  --beige-blanc: #faf6f2;
+  --beige-creme: #f5efe6;
+  --beige-sable: #ebe0d4;
+  --beige-taupe: #d4c4b0;
+  --beige-chaud: #c9b89a;
+  --texte: #5c4d3d;
+  --texte-muted: #7a6b5c;
+  --blanc: #fff;
+  --ombre: rgba(92, 77, 61, 0.08);
+  --ombre-forte: rgba(92, 77, 61, 0.12);
+  --erreur: #b85450;
+  --danger: #c45c58;
+
+  font-family: 'Outfit', system-ui, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--texte);
+  background-color: var(--beige-blanc);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--rose-fonce);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--rose-accent);
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--texte);
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  letter-spacing: 0.02em;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--rose-accent);
+  outline-offset: 2px;
+}
