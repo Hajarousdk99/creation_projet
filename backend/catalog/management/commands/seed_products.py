@@ -50,7 +50,7 @@ PRODUCTS_ROBE_SIMPLE = [
     ("Robe simple crème col V", "Robe crème à col V et bretelles, bustier gainé et jupe drapée. Longueur sol.", Decimal("90.00"), 19),
     ("Robe simple bleu clair dentelle", "Robe bleu clair mi-mollet à broderie anglaise et bordure dentelle. Style romantique.", Decimal("72.00"), 22),
     ("Robe simple rose brodée", "Robe rose pâle longue à motif floral brodé, bustier gainé. Tissu vaporeux.", Decimal("98.00"), 15),
-    ("Robe simple gris peplum", "Robe gris clair mi-mollet à peplum et fente côté. Coupe structurée.", Decimal("78.00"), 20),
+    ("Robe simple gris peplum", "Robe gris clair longue à encolure V drapée, manches dolman et taille rehaussée de perles. Jupe fluide en tissu plissé. Style élégant et soirée.", Decimal("78.00"), 20),
     ("Robe simple blanche dentelle", "Robe blanche mi-genou à bustier dentelle et jupe plissée. Style délicat.", Decimal("85.00"), 18),
     ("Robe simple blanche œillet", "Robe blanche à col bateau, manches courtes et broderie œillet. Jupe ample.", Decimal("75.00"), 21),
     ("Robe simple bordeaux drapée", "Robe bordeaux longue à encolure drapée et plissé côté. Silhouette fluide.", Decimal("94.00"), 17),
