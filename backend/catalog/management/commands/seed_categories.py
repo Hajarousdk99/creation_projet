@@ -4,7 +4,6 @@ from catalog.models import Category
 
 FEMME_SUBCATEGORIES = [
     ("Robes ", "robes"),
-    ("Accessoires", "accessoires"),
     ("Muscs", "muscs"),
     ("Parfums", "parfums"),
     ("Sacs", "sacs"),
@@ -32,6 +31,6 @@ class Command(BaseCommand):
 
         self.stdout.write(
             self.style.SUCCESS(
-                "Catégories créées: Femme (avec Robes traditionnelles, Accessoires, Muscs, Parfums, Sacs), Homme."
+                "Catégories créées: Femme (avec Robes, Muscs, Parfums, Sacs), Homme."
             )
         )

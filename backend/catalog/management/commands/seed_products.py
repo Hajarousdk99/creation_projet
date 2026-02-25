@@ -168,7 +168,7 @@ class Command(BaseCommand):
             defaults={"name": "Abaya", "parent": robes},
         )
 
-        for name, slug in [("Accessoires", "accessoires"), ("Muscs", "muscs"), ("Parfums", "parfums"), ("Sacs", "sacs")]:
+        for name, slug in [("Muscs", "muscs"), ("Parfums", "parfums"), ("Sacs", "sacs")]:
             Category.objects.get_or_create(slug=slug, defaults={"name": name, "parent": femme})
         parfums = Category.objects.get(slug="parfums")
         sacs = Category.objects.get(slug="sacs")
