@@ -34,6 +34,7 @@ export default function HomePage() {
     <div className="stack">
       <div className="pageHeader">
         <h1>Boutique</h1>
+        <p className="tagline">L'art d'être soi, pleinement féminin</p>
         <p className="muted">
           {isAuthed ? (
             <>

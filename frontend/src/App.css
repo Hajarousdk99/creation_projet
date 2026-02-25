@@ -194,6 +194,13 @@
 .pageHeader h1 {
   margin-bottom: 0.35rem;
 }
+.pageHeader .tagline {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--texte-muted);
+  margin: 0.5rem 0 0.75rem;
+  letter-spacing: 0.02em;
+}
 .pageHeader .muted {
   font-size: 1rem;
 }
