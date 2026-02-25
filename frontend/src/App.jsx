@@ -21,7 +21,7 @@ function App() {
     <div className="appShell">
       <header className="topNav">
         <Link className="brand" to="/">
-          Boutique Djellaba
+          لمسة هاجر
         </Link>
         <nav className="navLinks">
           <Link to="/">Accueil</Link>
