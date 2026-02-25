@@ -8,6 +8,8 @@ import CheckoutSuccessPage from './pages/CheckoutSuccessPage.jsx'
 import CategoryPage from './pages/CategoryPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
+import NotFoundPage from './pages/NotFoundPage.jsx'
+import OrdersPage from './pages/OrdersPage.jsx'
 import ProductDetailPage from './pages/ProductDetailPage.jsx'
 import RegisterPage from './pages/RegisterPage.jsx'
 
@@ -24,6 +26,7 @@ function App() {
         <nav className="navLinks">
           <Link to="/">Accueil</Link>
           <Link to="/cart">Panier</Link>
+          {isAuthed && <Link to="/orders">Mes commandes</Link>}
           {!isAuthed ? (
             <>
               <Link to="/login">Connexion</Link>
@@ -54,6 +57,8 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout/success" element={<CheckoutSuccessPage />} />
           <Route path="/checkout/cancel" element={<CheckoutCancelPage />} />
+          <Route path="/orders" element={<OrdersPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
     </div>
