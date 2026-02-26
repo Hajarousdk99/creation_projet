@@ -1,5 +1,11 @@
 ## E‑commerce (Django + React + Postgres + Redis + Stripe)
 
+**Projet : لمسة هاجر** — Site déployé : [Vercel](https://creation-projet.vercel.app) | Backend : [Render](https://creation-projet.onrender.com)
+
+📄 **Documentation technique (rapport + référence)** : [DOCUMENTATION-TECHNIQUE.md](./DOCUMENTATION-TECHNIQUE.md) — à ouvrir sur GitHub pour la lire en entier.
+
+---
+
 ### Pré‑requis
 
 - Docker + Docker Compose
